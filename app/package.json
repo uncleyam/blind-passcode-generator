@@ -1,0 +1,13 @@
+{
+  "name": "locker-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:ui": "tsc -p ui && node ui/copy-static.mjs",
+    "tauri": "tauri"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "2.12.4",
+    "typescript": "7.0.2"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "identifier": "default",
+  "description": "The window reaches only the app's own commands: no file system, shell or network access.",
+  "windows": ["main"],
+  "permissions": []
+}

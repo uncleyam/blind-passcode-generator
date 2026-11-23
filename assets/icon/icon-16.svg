@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+  <!-- Locker icon: drawn on a 16px grid for 16px. Rendered to icon.ico and icon-1024.png. -->
+  <defs>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#DCA845"/>
+      <stop offset="1" stop-color="#A2711C"/>
+    </linearGradient>
+  </defs>
+  <path d="M5 8 V5 a3 3 0 0 1 6 0 V8" fill="none" stroke="#94A3B8" stroke-width="2"/>
+  <rect x="2" y="7" width="12" height="8" rx="1.5" fill="url(#body)"/>
+  <rect x="2.5" y="7.5" width="11" height="7" rx="1" fill="none" stroke="#7A5513" stroke-width="1"/>
+  <g fill="#3A2A0D">
+    <rect x="4" y="10" width="2" height="2"/>
+    <rect x="7" y="10" width="2" height="2"/>
+    <rect x="10" y="10" width="2" height="2"/>
+  </g>
+</svg>

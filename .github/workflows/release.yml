@@ -1,0 +1,215 @@
+name: Release
+
+# Builds Blind Passcode Generator on GitHub's machines for Windows, Linux and Mac, and attaches
+# the downloads to a draft release.
+#
+# To make a release: set the version in Cargo.toml, commit, then push a tag of
+# that version with a "v" in front, such as v1.0.0. Look the draft over on
+# GitHub, try the downloads, and publish it by hand.
+#
+# Each download keeps one name from release to release, so a link to the
+# latest release's file never needs changing.
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: read
+
+jobs:
+  # Makes the draft first, so each build below only has to add its files.
+  draft:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Check the tag against the version
+        id: version
+        run: |
+          version=$(cargo metadata --no-deps --format-version 1 |
+            jq -r '.packages[] | select(.name == "locker-app") | .version')
+          if [ "v$version" != "$GITHUB_REF_NAME" ]; then
+            echo "::error::The tag is $GITHUB_REF_NAME, but Cargo.toml says $version."
+            exit 1
+          fi
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+      - name: Make the draft release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          if gh release view "$GITHUB_REF_NAME" > /dev/null 2>&1; then
+            echo "The release is already there, so the builds will replace its files."
+            exit 0
+          fi
+          options=(--draft --verify-tag --title "Blind Passcode Generator $VERSION" --generate-notes)
+          # a version like 1.1.0-dev is a trial run, not for everyone
+          case "$VERSION" in *-*) options+=(--prerelease) ;; esac
+          gh release create "$GITHUB_REF_NAME" "${options[@]}"
+
+  windows:
+    needs: draft
+    runs-on: windows-latest
+    permissions:
+      contents: write
+    env:
+      VERSION: ${{ needs.draft.outputs.version }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+
+      - name: Test the core
+        run: cargo test --locked
+
+      - name: Install the build tools
+        working-directory: app
+        run: npm ci
+
+      - name: Build the app and its installer
+        working-directory: app
+        run: npx tauri build
+
+      - name: Attach the installer
+        run: |
+          Copy-Item "target/release/bundle/nsis/Blind Passcode Generator_${env:VERSION}_x64-setup.exe" Blind-Passcode-Generator-setup-x64.exe
+          gh release upload $env:GITHUB_REF_NAME Blind-Passcode-Generator-setup-x64.exe --clobber
+
+      # The Store package isn't a download for people: it is unsigned, and
+      # only Microsoft's Partner Center can take it. It waits on this run's
+      # page under Artifacts.
+      - name: Pack the app for the Microsoft Store
+        run: ./app/store/pack.ps1 -Out Blind-Passcode-Generator-store-x64.msix
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: microsoft-store-package
+          path: Blind-Passcode-Generator-store-x64.msix
+          if-no-files-found: error
+
+  linux:
+    needs: draft
+    # the oldest Ubuntu GitHub offers, so the app also runs on newer systems
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    env:
+      VERSION: ${{ needs.draft.outputs.version }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+
+      - name: Install the libraries the app is built against
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libwebkit2gtk-4.1-dev libxdo-dev libssl-dev \
+            libayatana-appindicator3-dev librsvg2-dev libdbus-1-dev patchelf xdg-utils
+
+      - name: Test the core
+        run: cargo test --locked
+
+      - name: Install the build tools
+        working-directory: app
+        run: npm ci
+
+      - name: Build the app and its packages
+        working-directory: app
+        run: npx tauri build --bundles deb,appimage
+
+      - name: Attach the packages
+        run: |
+          cp "target/release/bundle/deb/Blind Passcode Generator_${VERSION}_amd64.deb" Blind-Passcode-Generator-amd64.deb
+          cp "target/release/bundle/appimage/Blind Passcode Generator_${VERSION}_amd64.AppImage" Blind-Passcode-Generator-x86_64.AppImage
+          gh release upload "$GITHUB_REF_NAME" Blind-Passcode-Generator-amd64.deb Blind-Passcode-Generator-x86_64.AppImage --clobber
+
+  mac:
+    needs: draft
+    runs-on: macos-latest
+    permissions:
+      contents: write
+    env:
+      VERSION: ${{ needs.draft.outputs.version }}
+      GH_TOKEN: ${{ github.token }}
+      # The Mac download is only attached once Apple's signing secrets are
+      # set. Until then the build is kept for trying on your own Mac.
+      SIGNED: ${{ secrets.APPLE_CERTIFICATE != '' }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+
+      - name: Add both kinds of Mac to Rust
+        run: rustup target add aarch64-apple-darwin x86_64-apple-darwin
+
+      - name: Test the core
+        run: cargo test --locked
+
+      - name: Install the build tools
+        working-directory: app
+        run: npm ci
+
+      - name: Build, sign and have Apple check it
+        if: env.SIGNED == 'true'
+        working-directory: app
+        env:
+          APPLE_CERTIFICATE: ${{ secrets.APPLE_CERTIFICATE }}
+          APPLE_CERTIFICATE_PASSWORD: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
+          APPLE_SIGNING_IDENTITY: ${{ secrets.APPLE_SIGNING_IDENTITY }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_PASSWORD: ${{ secrets.APPLE_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+        run: npx tauri build --target universal-apple-darwin --bundles dmg
+
+      - name: Attach the Mac download
+        if: env.SIGNED == 'true'
+        run: |
+          cp target/universal-apple-darwin/release/bundle/dmg/*.dmg Blind-Passcode-Generator-mac.dmg
+          gh release upload "$GITHUB_REF_NAME" Blind-Passcode-Generator-mac.dmg --clobber
+
+      - name: Build without Apple's signature
+        if: env.SIGNED != 'true'
+        working-directory: app
+        run: >
+          npx tauri build --target universal-apple-darwin --bundles dmg
+          --config '{"bundle":{"macOS":{"signingIdentity":"-"}}}'
+
+      - uses: actions/upload-artifact@v7
+        if: env.SIGNED != 'true'
+        with:
+          name: mac-unsigned-for-testing
+          path: target/universal-apple-darwin/release/bundle/dmg/*.dmg
+          if-no-files-found: error
+
+  # One list of checksums for whatever the builds attached.
+  checksums:
+    needs: [draft, windows, linux, mac]
+    if: ${{ !cancelled() && needs.draft.result == 'success' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Write and attach the checksums
+        run: |
+          gh release download "$GITHUB_REF_NAME" --repo "$GITHUB_REPOSITORY" --pattern "Blind-Passcode-Generator-*"
+          sha256sum Blind-Passcode-Generator-* | tee SHA256SUMS.txt
+          gh release upload "$GITHUB_REF_NAME" SHA256SUMS.txt --repo "$GITHUB_REPOSITORY" --clobber

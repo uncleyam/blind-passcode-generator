@@ -1,0 +1,1299 @@
+{
+ "slug": [
+  [
+   "iphone",
+   "iphone"
+  ],
+  [
+   "kids iPad (upstairs)",
+   "kids-ipad-upstairs"
+  ],
+  [
+   "???",
+   ""
+  ],
+  [
+   "",
+   ""
+  ],
+  [
+   "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "aaaaaaaaaaaaaaaaaaaaaaaa"
+  ],
+  [
+   "aaaaaaaaaaaaaaaaaaaaaaa bbb",
+   "aaaaaaaaaaaaaaaaaaaaaaa-"
+  ],
+  [
+   "--a--b--",
+   "a-b"
+  ],
+  [
+   " spaced  out ",
+   "spaced-out"
+  ],
+  [
+   "UPPER lower",
+   "upper-lower"
+  ],
+  [
+   "tab\tand\nnewline",
+   "tab-and-newline"
+  ],
+  [
+   "under_score",
+   "under-score"
+  ],
+  [
+   "dots.and,commas",
+   "dots-and-commas"
+  ],
+  [
+   "\u00fcn\u00ef \u00e7\u00f8d\u00e9",
+   "\u00fcn\u00ef-\u00e7\u00f8d\u00e9"
+  ],
+  [
+   "Stra\u00dfe",
+   "stra\u00dfe"
+  ],
+  [
+   "\u1e9e capital",
+   "\u00df-capital"
+  ],
+  [
+   "\u03a3\u03a3\u03a3",
+   "\u03c3\u03c3\u03c2"
+  ],
+  [
+   "\u0391\u03a3 \u0391\u03a3.",
+   "\u03b1\u03c2-\u03b1\u03c2"
+  ],
+  [
+   "\u03a3",
+   "\u03c3"
+  ],
+  [
+   "\u03c2",
+   "\u03c2"
+  ],
+  [
+   "\u0130stanbul",
+   "i-stanbul"
+  ],
+  [
+   "\u0131I",
+   "\u0131i"
+  ],
+  [
+   "\u01c5 title",
+   "\u01c6-title"
+  ],
+  [
+   "\ufb01 ligature",
+   "\ufb01-ligature"
+  ],
+  [
+   "\u01c4",
+   "\u01c6"
+  ],
+  [
+   "\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df",
+   "\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df"
+  ],
+  [
+   "\u606f\u5b50\u306eiPhone",
+   "\u606f\u5b50\u306eiphone"
+  ],
+  [
+   "\u5b50\u4f9b\u306e\u30b9\u30af\u30ea\u30fc\u30f3\u30bf\u30a4\u30e0\u306e\u30d1\u30b9\u30b3\u30fc\u30c9\u3092\u4fdd\u7ba1\u3059\u308b\u305f\u3081\u306e\u3068\u3066\u3082\u9577\u3044\u540d\u524d",
+   "\u5b50\u4f9b\u306e\u30b9\u30af\u30ea\u30fc\u30f3\u30bf\u30a4\u30e0\u306e\u30d1\u30b9\u30b3\u30fc\u30c9\u3092\u4fdd\u7ba1\u3059\u308b\u305f\u3081"
+  ],
+  [
+   "\u0422\u0435\u043b\u0435\u0444\u043e\u043d \u0441\u044b\u043d\u0430",
+   "\u0442\u0435\u043b\u0435\u0444\u043e\u043d-\u0441\u044b\u043d\u0430"
+  ],
+  [
+   "\u039f\u0394\u039f\u03a3 \u03a3\u0399\u03a3\u03a5\u03a6\u039f\u03a3",
+   "\u03bf\u03b4\u03bf\u03c2-\u03c3\u03b9\u03c3\u03c5\u03c6\u03bf\u03c2"
+  ],
+  [
+   "\u092c\u091a\u094d\u091a\u094b\u0902 \u0915\u093e \u092b\u093c\u094b\u0928",
+   "\u092c\u091a-\u091a-\u0915-\u092b-\u0928"
+  ],
+  [
+   "\u0939\u093f\u0928\u094d\u0926\u0940",
+   "\u0939-\u0928-\u0926"
+  ],
+  [
+   "\u0ba4\u0bae\u0bbf\u0bb4\u0bcd",
+   "\u0ba4\u0bae-\u0bb4"
+  ],
+  [
+   "\u0e44\u0e17\u0e22 \u0e20\u0e32\u0e29\u0e32",
+   "\u0e44\u0e17\u0e22-\u0e20\u0e32\u0e29\u0e32"
+  ],
+  [
+   "\u0647\u0627\u062a\u0641 \u0627\u0644\u0623\u0637\u0641\u0627\u0644",
+   "\u0647\u0627\u062a\u0641-\u0627\u0644\u0623\u0637\u0641\u0627\u0644"
+  ],
+  [
+   "\u05e2\u05d1\u05e8\u05d9\u05ea",
+   "\u05e2\u05d1\u05e8\u05d9\u05ea"
+  ],
+  [
+   "\ud55c\uad6d\uc5b4 \ud3f0",
+   "\ud55c\uad6d\uc5b4-\ud3f0"
+  ],
+  [
+   "\ud55c\uae00 \u3131\u3134",
+   "\ud55c\uae00-\u3131\u3134"
+  ],
+  [
+   "\ud83d\udcf1 phone",
+   "phone"
+  ],
+  [
+   "\ud83d\udc68\u200d\ud83d\udc69\u200d\ud83d\udc67",
+   ""
+  ],
+  [
+   "Caf\u00e9",
+   "caf\u00e9"
+  ],
+  [
+   "Cafe\u0301",
+   "cafe"
+  ],
+  [
+   "\u24b6 box",
+   "box"
+  ],
+  [
+   "\u24d0",
+   ""
+  ],
+  [
+   "\u2167 \u00b2 \u00bd \u0663",
+   "\u2177-\u00b2-\u00bd-\u0663"
+  ],
+  [
+   "\u3280 \u2460 \u247d",
+   "\u3280-\u2460-\u247d"
+  ],
+  [
+   "\u4e00\u4e8c\u4e09",
+   "\u4e00\u4e8c\u4e09"
+  ],
+  [
+   "\u3007",
+   "\u3007"
+  ],
+  [
+   "\ud835\udc00\ud835\udc01\ud835\udc02",
+   "\ud835\udc00\ud835\udc01\ud835\udc02"
+  ],
+  [
+   "\ud835\udfcf\ud835\udfd0",
+   "\ud835\udfcf\ud835\udfd0"
+  ],
+  [
+   "\u02b0 modifier",
+   "\u02b0-modifier"
+  ],
+  [
+   "\u0640",
+   "\u0640"
+  ],
+  [
+   "\u00ad soft",
+   "soft"
+  ],
+  [
+   "\u200d joiner",
+   "joiner"
+  ],
+  [
+   "\ufeff bom",
+   "bom"
+  ],
+  [
+   "\u3000ideographic\u3000",
+   "ideographic"
+  ],
+  [
+   "e\u0301\u0301\u0301",
+   "e"
+  ],
+  [
+   "\u1fb3 iota",
+   "\u1fb3-iota"
+  ],
+  [
+   "\u1fbc",
+   "\u1fb3"
+  ],
+  [
+   "\u0149",
+   "\u0149"
+  ],
+  [
+   "\u03a9 ohm",
+   "\u03c9-ohm"
+  ],
+  [
+   "K kelvin",
+   "k-kelvin"
+  ],
+  [
+   "\u00c5 angstrom",
+   "\u00e5-angstrom"
+  ]
+ ],
+ "parse_delay": [
+  [
+   "",
+   60.0
+  ],
+  [
+   "30s",
+   30.0
+  ],
+  [
+   "5",
+   300.0
+  ],
+  [
+   "5m",
+   300.0
+  ],
+  [
+   "2h",
+   7200.0
+  ],
+  [
+   "1.5h",
+   5400.0
+  ],
+  [
+   " 90S ",
+   90.0
+  ],
+  [
+   "abc",
+   null
+  ],
+  [
+   "0",
+   null
+  ],
+  [
+   "-5m",
+   null
+  ],
+  [
+   "s",
+   null
+  ],
+  [
+   "m",
+   null
+  ],
+  [
+   "h",
+   null
+  ],
+  [
+   ".",
+   null
+  ],
+  [
+   "5 m",
+   300.0
+  ],
+  [
+   "  7  ",
+   420.0
+  ],
+  [
+   "1e3",
+   60000.0
+  ],
+  [
+   "1E2",
+   6000.0
+  ],
+  [
+   ".5",
+   30.0
+  ],
+  [
+   "5.",
+   300.0
+  ],
+  [
+   "+5",
+   300.0
+  ],
+  [
+   "-0",
+   null
+  ],
+  [
+   "0s",
+   null
+  ],
+  [
+   "0.001s",
+   0.001
+  ],
+  [
+   "1e-3h",
+   3.6
+  ],
+  [
+   "e5",
+   null
+  ],
+  [
+   "1e",
+   null
+  ],
+  [
+   "5x",
+   null
+  ],
+  [
+   "5mm",
+   null
+  ],
+  [
+   "5ms",
+   null
+  ],
+  [
+   "1 2",
+   null
+  ],
+  [
+   "--5",
+   null
+  ],
+  [
+   "0x10",
+   null
+  ],
+  [
+   "1,5",
+   null
+  ]
+ ],
+ "parse_delay_python_only": [
+  "1_000",
+  "inf",
+  "Infinity",
+  "nan",
+  "NaN",
+  "1e400",
+  "1e308h",
+  "\u0663",
+  "\u0661\u0662"
+ ],
+ "fmt_duration": [
+  [
+   1,
+   "1 second"
+  ],
+  [
+   0.2,
+   "1 second"
+  ],
+  [
+   45,
+   "45 seconds"
+  ],
+  [
+   120,
+   "2 minutes"
+  ],
+  [
+   7200,
+   "2.0 hours"
+  ],
+  [
+   0,
+   "1 second"
+  ],
+  [
+   0.5,
+   "1 second"
+  ],
+  [
+   1.5,
+   "2 seconds"
+  ],
+  [
+   2.5,
+   "2 seconds"
+  ],
+  [
+   3.5,
+   "4 seconds"
+  ],
+  [
+   60,
+   "60 seconds"
+  ],
+  [
+   61,
+   "61 seconds"
+  ],
+  [
+   88.5,
+   "88 seconds"
+  ],
+  [
+   89,
+   "89 seconds"
+  ],
+  [
+   89.4,
+   "89 seconds"
+  ],
+  [
+   89.5,
+   "90 seconds"
+  ],
+  [
+   89.9,
+   "90 seconds"
+  ],
+  [
+   90,
+   "2 minutes"
+  ],
+  [
+   91,
+   "2 minutes"
+  ],
+  [
+   149,
+   "2 minutes"
+  ],
+  [
+   150,
+   "2 minutes"
+  ],
+  [
+   151,
+   "3 minutes"
+  ],
+  [
+   210,
+   "4 minutes"
+  ],
+  [
+   270,
+   "4 minutes"
+  ],
+  [
+   300,
+   "5 minutes"
+  ],
+  [
+   3599,
+   "60 minutes"
+  ],
+  [
+   5399,
+   "90 minutes"
+  ],
+  [
+   5399.9,
+   "90 minutes"
+  ],
+  [
+   5400,
+   "1.5 hours"
+  ],
+  [
+   5401,
+   "1.5 hours"
+  ],
+  [
+   6300,
+   "1.8 hours"
+  ],
+  [
+   8100,
+   "2.2 hours"
+  ],
+  [
+   8999,
+   "2.5 hours"
+  ],
+  [
+   9000,
+   "2.5 hours"
+  ],
+  [
+   9180,
+   "2.5 hours"
+  ],
+  [
+   86400,
+   "24.0 hours"
+  ],
+  [
+   1000000.0,
+   "277.8 hours"
+  ],
+  [
+   123456.789,
+   "34.3 hours"
+  ],
+  [
+   1000000000000.0,
+   "277777777.8 hours"
+  ],
+  [
+   0.0001,
+   "1 second"
+  ]
+ ],
+ "fmt_created": [
+  [
+   "20261022-142413",
+   "2026-10-22 14:24"
+  ],
+  [
+   "unknown",
+   "unknown"
+  ],
+  [
+   "",
+   ""
+  ],
+  [
+   "20261022",
+   "20261022"
+  ],
+  [
+   "2026102214241300",
+   "2026102214241300"
+  ],
+  [
+   "abcdefghijklmno",
+   "abcd-ef-gh jk:lm"
+  ],
+  [
+   "\u606f\u5b50\u306eiPhone\u606f\u5b50\u306eiPhone\u606f",
+   "\u606f\u5b50\u306eiPhone\u606f\u5b50\u306eiPhone\u606f"
+  ]
+ ],
+ "json_string": [
+  [
+   "iphone",
+   "\"iphone\""
+  ],
+  [
+   "kids iPad (upstairs)",
+   "\"kids iPad (upstairs)\""
+  ],
+  [
+   "???",
+   "\"???\""
+  ],
+  [
+   "",
+   "\"\""
+  ],
+  [
+   "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+  ],
+  [
+   "aaaaaaaaaaaaaaaaaaaaaaa bbb",
+   "\"aaaaaaaaaaaaaaaaaaaaaaa bbb\""
+  ],
+  [
+   "--a--b--",
+   "\"--a--b--\""
+  ],
+  [
+   " spaced  out ",
+   "\" spaced  out \""
+  ],
+  [
+   "UPPER lower",
+   "\"UPPER lower\""
+  ],
+  [
+   "tab\tand\nnewline",
+   "\"tab\\tand\\nnewline\""
+  ],
+  [
+   "under_score",
+   "\"under_score\""
+  ],
+  [
+   "dots.and,commas",
+   "\"dots.and,commas\""
+  ],
+  [
+   "\u00fcn\u00ef \u00e7\u00f8d\u00e9",
+   "\"\\u00fcn\\u00ef \\u00e7\\u00f8d\\u00e9\""
+  ],
+  [
+   "Stra\u00dfe",
+   "\"Stra\\u00dfe\""
+  ],
+  [
+   "\u1e9e capital",
+   "\"\\u1e9e capital\""
+  ],
+  [
+   "\u03a3\u03a3\u03a3",
+   "\"\\u03a3\\u03a3\\u03a3\""
+  ],
+  [
+   "\u0391\u03a3 \u0391\u03a3.",
+   "\"\\u0391\\u03a3 \\u0391\\u03a3.\""
+  ],
+  [
+   "\u03a3",
+   "\"\\u03a3\""
+  ],
+  [
+   "\u03c2",
+   "\"\\u03c2\""
+  ],
+  [
+   "\u0130stanbul",
+   "\"\\u0130stanbul\""
+  ],
+  [
+   "\u0131I",
+   "\"\\u0131I\""
+  ],
+  [
+   "\u01c5 title",
+   "\"\\u01c5 title\""
+  ],
+  [
+   "\ufb01 ligature",
+   "\"\\ufb01 ligature\""
+  ],
+  [
+   "\u01c4",
+   "\"\\u01c4\""
+  ],
+  [
+   "\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df\u00df",
+   "\"\\u00df\\u00df\\u00df\\u00df\\u00df\\u00df\\u00df\\u00df\\u00df\\u00df\\u00df\\u00df\\u00df\\u00df\\u00df\\u00df\\u00df\\u00df\\u00df\\u00df\\u00df\\u00df\\u00df\\u00df\\u00df\\u00df\\u00df\\u00df\\u00df\\u00df\""
+  ],
+  [
+   "\u606f\u5b50\u306eiPhone",
+   "\"\\u606f\\u5b50\\u306eiPhone\""
+  ],
+  [
+   "\u5b50\u4f9b\u306e\u30b9\u30af\u30ea\u30fc\u30f3\u30bf\u30a4\u30e0\u306e\u30d1\u30b9\u30b3\u30fc\u30c9\u3092\u4fdd\u7ba1\u3059\u308b\u305f\u3081\u306e\u3068\u3066\u3082\u9577\u3044\u540d\u524d",
+   "\"\\u5b50\\u4f9b\\u306e\\u30b9\\u30af\\u30ea\\u30fc\\u30f3\\u30bf\\u30a4\\u30e0\\u306e\\u30d1\\u30b9\\u30b3\\u30fc\\u30c9\\u3092\\u4fdd\\u7ba1\\u3059\\u308b\\u305f\\u3081\\u306e\\u3068\\u3066\\u3082\\u9577\\u3044\\u540d\\u524d\""
+  ],
+  [
+   "\u0422\u0435\u043b\u0435\u0444\u043e\u043d \u0441\u044b\u043d\u0430",
+   "\"\\u0422\\u0435\\u043b\\u0435\\u0444\\u043e\\u043d \\u0441\\u044b\\u043d\\u0430\""
+  ],
+  [
+   "\u039f\u0394\u039f\u03a3 \u03a3\u0399\u03a3\u03a5\u03a6\u039f\u03a3",
+   "\"\\u039f\\u0394\\u039f\\u03a3 \\u03a3\\u0399\\u03a3\\u03a5\\u03a6\\u039f\\u03a3\""
+  ],
+  [
+   "\u092c\u091a\u094d\u091a\u094b\u0902 \u0915\u093e \u092b\u093c\u094b\u0928",
+   "\"\\u092c\\u091a\\u094d\\u091a\\u094b\\u0902 \\u0915\\u093e \\u092b\\u093c\\u094b\\u0928\""
+  ],
+  [
+   "\u0939\u093f\u0928\u094d\u0926\u0940",
+   "\"\\u0939\\u093f\\u0928\\u094d\\u0926\\u0940\""
+  ],
+  [
+   "\u0ba4\u0bae\u0bbf\u0bb4\u0bcd",
+   "\"\\u0ba4\\u0bae\\u0bbf\\u0bb4\\u0bcd\""
+  ],
+  [
+   "\u0e44\u0e17\u0e22 \u0e20\u0e32\u0e29\u0e32",
+   "\"\\u0e44\\u0e17\\u0e22 \\u0e20\\u0e32\\u0e29\\u0e32\""
+  ],
+  [
+   "\u0647\u0627\u062a\u0641 \u0627\u0644\u0623\u0637\u0641\u0627\u0644",
+   "\"\\u0647\\u0627\\u062a\\u0641 \\u0627\\u0644\\u0623\\u0637\\u0641\\u0627\\u0644\""
+  ],
+  [
+   "\u05e2\u05d1\u05e8\u05d9\u05ea",
+   "\"\\u05e2\\u05d1\\u05e8\\u05d9\\u05ea\""
+  ],
+  [
+   "\ud55c\uad6d\uc5b4 \ud3f0",
+   "\"\\ud55c\\uad6d\\uc5b4 \\ud3f0\""
+  ],
+  [
+   "\ud55c\uae00 \u3131\u3134",
+   "\"\\ud55c\\uae00 \\u3131\\u3134\""
+  ],
+  [
+   "\ud83d\udcf1 phone",
+   "\"\\ud83d\\udcf1 phone\""
+  ],
+  [
+   "\ud83d\udc68\u200d\ud83d\udc69\u200d\ud83d\udc67",
+   "\"\\ud83d\\udc68\\u200d\\ud83d\\udc69\\u200d\\ud83d\\udc67\""
+  ],
+  [
+   "Caf\u00e9",
+   "\"Caf\\u00e9\""
+  ],
+  [
+   "Cafe\u0301",
+   "\"Cafe\\u0301\""
+  ],
+  [
+   "\u24b6 box",
+   "\"\\u24b6 box\""
+  ],
+  [
+   "\u24d0",
+   "\"\\u24d0\""
+  ],
+  [
+   "\u2167 \u00b2 \u00bd \u0663",
+   "\"\\u2167 \\u00b2 \\u00bd \\u0663\""
+  ],
+  [
+   "\u3280 \u2460 \u247d",
+   "\"\\u3280 \\u2460 \\u247d\""
+  ],
+  [
+   "\u4e00\u4e8c\u4e09",
+   "\"\\u4e00\\u4e8c\\u4e09\""
+  ],
+  [
+   "\u3007",
+   "\"\\u3007\""
+  ],
+  [
+   "\ud835\udc00\ud835\udc01\ud835\udc02",
+   "\"\\ud835\\udc00\\ud835\\udc01\\ud835\\udc02\""
+  ],
+  [
+   "\ud835\udfcf\ud835\udfd0",
+   "\"\\ud835\\udfcf\\ud835\\udfd0\""
+  ],
+  [
+   "\u02b0 modifier",
+   "\"\\u02b0 modifier\""
+  ],
+  [
+   "\u0640",
+   "\"\\u0640\""
+  ],
+  [
+   "\u00ad soft",
+   "\"\\u00ad soft\""
+  ],
+  [
+   "\u200d joiner",
+   "\"\\u200d joiner\""
+  ],
+  [
+   "\ufeff bom",
+   "\"\\ufeff bom\""
+  ],
+  [
+   "\u3000ideographic\u3000",
+   "\"\\u3000ideographic\\u3000\""
+  ],
+  [
+   "e\u0301\u0301\u0301",
+   "\"e\\u0301\\u0301\\u0301\""
+  ],
+  [
+   "\u1fb3 iota",
+   "\"\\u1fb3 iota\""
+  ],
+  [
+   "\u1fbc",
+   "\"\\u1fbc\""
+  ],
+  [
+   "\u0149",
+   "\"\\u0149\""
+  ],
+  [
+   "\u03a9 ohm",
+   "\"\\u03a9 ohm\""
+  ],
+  [
+   "K kelvin",
+   "\"K kelvin\""
+  ],
+  [
+   "\u00c5 angstrom",
+   "\"\\u00c5 angstrom\""
+  ],
+  [
+   "q\"q",
+   "\"q\\\"q\""
+  ],
+  [
+   "back\\slash",
+   "\"back\\\\slash\""
+  ],
+  [
+   "\b\f\n\r\t",
+   "\"\\b\\f\\n\\r\\t\""
+  ],
+  [
+   "\u0000\u0001\u001f\u007f",
+   "\"\\u0000\\u0001\\u001f\\u007f\""
+  ],
+  [
+   "\u0080\u00ff",
+   "\"\\u0080\\u00ff\""
+  ],
+  [
+   "\u2028\u2029",
+   "\"\\u2028\\u2029\""
+  ],
+  [
+   "/",
+   "\"/\""
+  ],
+  [
+   "\udbff\udfff",
+   "\"\\udbff\\udfff\""
+  ],
+  [
+   "\ud7ff\ue000",
+   "\"\\ud7ff\\ue000\""
+  ]
+ ],
+ "base64_decode": [
+  [
+   "",
+   ""
+  ],
+  [
+   "AAAA",
+   "000000"
+  ],
+  [
+   "AAA=",
+   "0000"
+  ],
+  [
+   "AA==",
+   "00"
+  ],
+  [
+   "A===",
+   null
+  ],
+  [
+   "A",
+   null
+  ],
+  [
+   "AA",
+   null
+  ],
+  [
+   "AAA",
+   null
+  ],
+  [
+   "AAAAA",
+   null
+  ],
+  [
+   "AAAAAA",
+   null
+  ],
+  [
+   "AAAAAAA",
+   null
+  ],
+  [
+   "=",
+   ""
+  ],
+  [
+   "==",
+   ""
+  ],
+  [
+   "====",
+   ""
+  ],
+  [
+   "A=A=",
+   null
+  ],
+  [
+   "AA=A",
+   null
+  ],
+  [
+   "AA==AAAA",
+   "00"
+  ],
+  [
+   "AAA=AAAA",
+   "0000"
+  ],
+  [
+   "AB=C=D",
+   "0010"
+  ],
+  [
+   "A B C D",
+   "001083"
+  ],
+  [
+   "*A*A*A*A*",
+   "000000"
+  ],
+  [
+   "aGVsbG8=",
+   "68656c6c6f"
+  ],
+  [
+   "aGVsbG8",
+   null
+  ],
+  [
+   "aGVsbG8=junk",
+   "68656c6c6f"
+  ],
+  [
+   "aGVsbG8===",
+   "68656c6c6f"
+  ],
+  [
+   "a-b_",
+   null
+  ],
+  [
+   "++//",
+   "fbefff"
+  ],
+  [
+   "====AAAA",
+   "000000"
+  ],
+  [
+   "A=",
+   null
+  ],
+  [
+   "A==",
+   null
+  ],
+  [
+   "A====",
+   null
+  ],
+  [
+   "QQ",
+   null
+  ],
+  [
+   "QQ=",
+   null
+  ],
+  [
+   "QR==",
+   "41"
+  ],
+  [
+   "QUI=",
+   "4142"
+  ],
+  [
+   "QUJ=",
+   "4142"
+  ]
+ ],
+ "base64_encode": [
+  [
+   "",
+   ""
+  ],
+  [
+   "00",
+   "AA=="
+  ],
+  [
+   "0001",
+   "AAE="
+  ],
+  [
+   "000102",
+   "AAEC"
+  ],
+  [
+   "00010203",
+   "AAECAw=="
+  ],
+  [
+   "0001020304",
+   "AAECAwQ="
+  ],
+  [
+   "000102030405",
+   "AAECAwQF"
+  ],
+  [
+   "00010203040506",
+   "AAECAwQFBg=="
+  ],
+  [
+   "0001020304050607",
+   "AAECAwQFBgc="
+  ],
+  [
+   "000102030405060708",
+   "AAECAwQFBgcI"
+  ],
+  [
+   "00010203040506070809",
+   "AAECAwQFBgcICQ=="
+  ],
+  [
+   "000102030405060708090a",
+   "AAECAwQFBgcICQo="
+  ],
+  [
+   "000102030405060708090a0b",
+   "AAECAwQFBgcICQoL"
+  ],
+  [
+   "000102030405060708090a0b0c",
+   "AAECAwQFBgcICQoLDA=="
+  ],
+  [
+   "000102030405060708090a0b0c0d",
+   "AAECAwQFBgcICQoLDA0="
+  ],
+  [
+   "000102030405060708090a0b0c0d0e",
+   "AAECAwQFBgcICQoLDA0O"
+  ],
+  [
+   "000102030405060708090a0b0c0d0e0f",
+   "AAECAwQFBgcICQoLDA0ODw=="
+  ],
+  [
+   "000102030405060708090a0b0c0d0e0f10",
+   "AAECAwQFBgcICQoLDA0ODxA="
+  ],
+  [
+   "000102030405060708090a0b0c0d0e0f1011",
+   "AAECAwQFBgcICQoLDA0ODxAR"
+  ],
+  [
+   "000102030405060708090a0b0c0d0e0f101112",
+   "AAECAwQFBgcICQoLDA0ODxAREg=="
+  ],
+  [
+   "000102030405060708090a0b0c0d0e0f10111213",
+   "AAECAwQFBgcICQoLDA0ODxAREhM="
+  ],
+  [
+   "000102030405060708090a0b0c0d0e0f1011121314",
+   "AAECAwQFBgcICQoLDA0ODxAREhMU"
+  ],
+  [
+   "000102030405060708090a0b0c0d0e0f101112131415",
+   "AAECAwQFBgcICQoLDA0ODxAREhMUFQ=="
+  ],
+  [
+   "000102030405060708090a0b0c0d0e0f10111213141516",
+   "AAECAwQFBgcICQoLDA0ODxAREhMUFRY="
+  ],
+  [
+   "000102030405060708090a0b0c0d0e0f1011121314151617",
+   "AAECAwQFBgcICQoLDA0ODxAREhMUFRYX"
+  ],
+  [
+   "000102030405060708090a0b0c0d0e0f101112131415161718",
+   "AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGA=="
+  ],
+  [
+   "000102030405060708090a0b0c0d0e0f10111213141516171819",
+   "AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBk="
+  ],
+  [
+   "000102030405060708090a0b0c0d0e0f101112131415161718191a",
+   "AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBka"
+  ],
+  [
+   "000102030405060708090a0b0c0d0e0f101112131415161718191a1b",
+   "AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGw=="
+  ],
+  [
+   "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c",
+   "AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxw="
+  ],
+  [
+   "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d",
+   "AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwd"
+  ],
+  [
+   "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e",
+   "AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHg=="
+  ],
+  [
+   "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+   "AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8="
+  ],
+  [
+   "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20",
+   "AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8g"
+  ],
+  [
+   "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f2021",
+   "AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8gIQ=="
+  ],
+  [
+   "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122",
+   "AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8gISI="
+  ],
+  [
+   "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20212223",
+   "AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8gISIj"
+  ],
+  [
+   "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f2021222324",
+   "AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8gISIjJA=="
+  ],
+  [
+   "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425",
+   "AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8gISIjJCU="
+  ],
+  [
+   "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20212223242526",
+   "AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8gISIjJCUm"
+  ]
+ ],
+ "last_line": [
+  [
+   "a\nb",
+   "b"
+  ],
+  [
+   "a\r\nb\r\n",
+   "b"
+  ],
+  [
+   "a\rb",
+   "b"
+  ],
+  [
+   "a\n\n",
+   "a"
+  ],
+  [
+   "  a  \n  b  \n",
+   "  b"
+  ],
+  [
+   "a\u000bb",
+   "b"
+  ],
+  [
+   "a\fb",
+   "b"
+  ],
+  [
+   "a\u001cb",
+   "b"
+  ],
+  [
+   "a\u001db",
+   "b"
+  ],
+  [
+   "a\u001eb",
+   "b"
+  ],
+  [
+   "a\u001fb",
+   "a\u001fb"
+  ],
+  [
+   "a\u0085b",
+   "b"
+  ],
+  [
+   "a\u2028b",
+   "b"
+  ],
+  [
+   "a\u2029b",
+   "b"
+  ],
+  [
+   "a\u00a0b",
+   "a\u00a0b"
+  ],
+  [
+   "a\u3000b",
+   "a\u3000b"
+  ],
+  [
+   "a\nb\u3000",
+   "b"
+  ],
+  [
+   "a\nb\u001f",
+   "b"
+  ],
+  [
+   "b\u001c",
+   "b"
+  ],
+  [
+   "\ufeffa",
+   "\ufeffa"
+  ],
+  [
+   "a\n\ufeff",
+   "\ufeff"
+  ],
+  [
+   "a\nb c",
+   "b c"
+  ]
+ ],
+ "find_label": [
+  [
+   " iPhone ",
+   "iphone"
+  ],
+  [
+   "\u0391\u03a3",
+   "\u03b1\u03c2"
+  ],
+  [
+   "\u0130",
+   "i\u0307"
+  ],
+  [
+   "\u1e9e",
+   "\u00df"
+  ],
+  [
+   "\u3000x\u001f",
+   "x"
+  ]
+ ]
+}

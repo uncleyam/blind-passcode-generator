@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Locker icon: drawn for 40px and up. Rendered to icon.ico and icon-1024.png. -->
+  <defs>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#DCA845"/>
+      <stop offset="1" stop-color="#A2711C"/>
+    </linearGradient>
+    <linearGradient id="shackle" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#E2E8F0"/>
+      <stop offset="0.45" stop-color="#F8FAFC"/>
+      <stop offset="1" stop-color="#94A3B8"/>
+    </linearGradient>
+    <filter id="blur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+  </defs>
+  <rect x="46" y="118" width="164" height="126" rx="30" fill="#2A2212" opacity="0.35" filter="url(#blur)"/>
+  <path d="M84 120 V86 a44 44 0 0 1 88 0 V120" fill="none" stroke="#475569" stroke-width="30"/>
+  <path d="M84 120 V86 a44 44 0 0 1 88 0 V120" fill="none" stroke="url(#shackle)" stroke-width="22"/>
+  <rect x="38" y="104" width="180" height="132" rx="30" fill="url(#body)"/>
+  <rect x="38" y="104" width="180" height="132" rx="30" fill="none" stroke="#7A5513" stroke-width="4"/>
+  <g fill="#3A2A0D">
+    <circle cx="80" cy="170" r="12"/>
+    <circle cx="112" cy="170" r="12"/>
+    <circle cx="144" cy="170" r="12"/>
+    <circle cx="176" cy="170" r="12"/>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blind Passcode Generator</title>
+    <script src="theme.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="main.js"></script>
+  </head>
+  <body>
+    <!-- The window has no system title bar; this one replaces it. Its left
+         stretch drags the window, and it stays the same on every screen. -->
+    <header class="titlebar">
+      <div class="titlebar-drag" id="titlebar-drag">
+        <img class="titlebar-badge" src="icon.svg" alt="">
+        <span class="titlebar-title">Blind Passcode Generator</span>
+      </div>
+      <button type="button" class="titlebar-button" id="minimize" title="Minimize" aria-label="Minimize" tabindex="-1">
+        <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 5.5h8" /></svg>
+      </button>
+      <button type="button" class="titlebar-button close" id="close" title="Close" aria-label="Close" tabindex="-1">
+        <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1.5 1.5l7 7M8.5 1.5l-7 7" /></svg>
+      </button>
+    </header>
+    <main id="app" tabindex="-1"></main>
+  </body>
+</html>

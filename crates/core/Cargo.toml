@@ -1,0 +1,21 @@
+[package]
+name = "locker-core"
+description = "The sequence, time-lock, file format and storage logic behind Blind Passcode Generator"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+publish.workspace = true
+
+[dependencies]
+chrono = { version = "0.4", default-features = false, features = ["clock"] }
+getrandom = "0.4"
+hmac = "0.13"
+num-bigint = "0.5"
+num-traits = "0.2"
+serde_json = { version = "1", features = ["arbitrary_precision"] }
+sha2 = "0.11"
+unicode-properties = { version = "0.1", default-features = false, features = ["general-category"] }
+
+[dev-dependencies]
+tempfile = "3"

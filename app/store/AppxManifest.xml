@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The Microsoft Store package's description of Blind Passcode Generator. pack.ps1
+  fills in the version.
+
+  Name, Publisher and PublisherDisplayName below are the ones Partner Center
+  gave when the app's name was reserved there (Product management > Product
+  identity). They must match it letter for letter, or the upload is refused.
+-->
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  IgnorableNamespaces="uap rescap">
+
+  <Identity
+    Name="SamWilliams.BlindPasscodeGenerator"
+    Publisher="CN=875B9B67-FA5A-491E-96AD-BDBD55AF152A"
+    Version="0.0.0.0"
+    ProcessorArchitecture="x64" />
+
+  <Properties>
+    <DisplayName>Blind Passcode Generator</DisplayName>
+    <PublisherDisplayName>Sam Williams</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17763.0" MaxVersionTested="10.0.26100.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="en-US" />
+  </Resources>
+
+  <Applications>
+    <Application Id="BlindPasscodeGenerator" Executable="blind-passcode-generator.exe" EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements
+        DisplayName="Blind Passcode Generator"
+        Description="Set a passcode that you yourself don't know"
+        BackgroundColor="transparent"
+        Square150x150Logo="Assets\Square150x150Logo.png"
+        Square44x44Logo="Assets\Square44x44Logo.png" />
+    </Application>
+  </Applications>
+
+  <!-- an ordinary desktop program, which is what lets it keep codes in ~/.locker -->
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust" />
+  </Capabilities>
+</Package>

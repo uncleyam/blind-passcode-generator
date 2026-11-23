@@ -1,0 +1,10 @@
+/target/
+
+# Python stays out of this repo. The fixtures are plain data.
+*.py
+__pycache__/
+
+# The app's dependencies and build output
+/app/node_modules/
+/app/ui/dist/
+/app/src-tauri/gen/

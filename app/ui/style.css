@@ -1,0 +1,1097 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f6f5f2;
+  --surface: #ffffff;
+  --soft: #efeee9;
+  --text: #1d1d1b;
+  --muted: #6b6a64;
+  --line: #dedcd5;
+  --primary: #1d1d1b;
+  --primary-text: #ffffff;
+  --accent: #8a5a12;
+  --warn-bg: #fbf3e2;
+  --warn-line: #dcc28c;
+  --danger: #b42318;
+  --danger-soft: #fbece9;
+  --danger-line: #efc4be;
+  --titlebar: #ecebe6;
+  --titlebar-hover: rgba(0, 0, 0, 0.06);
+  --close-hover: #e64d4d;
+  --close-pressed: #bf3838;
+  --note: #f2d36e;
+  --note-edge: #c9a440;
+  --radius: 6px;
+  font-family: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* The dark colours, twice: once for when Settings says to match a computer
+   that is set to dark, and once for when the app itself is set to dark, as it
+   is until Settings says otherwise. Keep the two the same. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #161615;
+    --surface: #1f1f1d;
+    --soft: #262624;
+    --text: #ecebe7;
+    --muted: #a3a29b;
+    --line: #34332f;
+    --primary: #ecebe7;
+    --primary-text: #161615;
+    --accent: #d9a441;
+    --warn-bg: #2c2615;
+    --warn-line: #6e5a2a;
+    --danger: #f2817a;
+    --danger-soft: #331d1b;
+    --danger-line: #653029;
+    --titlebar: #1b1b1a;
+    --titlebar-hover: rgba(255, 255, 255, 0.08);
+    --note: #d9b24c;
+    --note-edge: #9a7622;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #161615;
+  --surface: #1f1f1d;
+  --soft: #262624;
+  --text: #ecebe7;
+  --muted: #a3a29b;
+  --line: #34332f;
+  --primary: #ecebe7;
+  --primary-text: #161615;
+  --accent: #d9a441;
+  --warn-bg: #2c2615;
+  --warn-line: #6e5a2a;
+  --danger: #f2817a;
+  --danger-soft: #331d1b;
+  --danger-line: #653029;
+  --titlebar: #1b1b1a;
+  --titlebar-hover: rgba(255, 255, 255, 0.08);
+  --note: #d9b24c;
+  --note-edge: #9a7622;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+  user-select: none;
+}
+
+.titlebar {
+  display: flex;
+  align-items: stretch;
+  height: 40px;
+  flex-shrink: 0;
+  background: var(--titlebar);
+  border-bottom: 1px solid var(--line);
+}
+
+.titlebar-drag {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 14px;
+}
+
+.titlebar-badge,
+.titlebar-title {
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+
+.titlebar-badge {
+  width: 22px;
+  height: 22px;
+}
+
+.titlebar-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.titlebar-button {
+  width: 46px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--muted);
+  display: grid;
+  place-items: center;
+}
+
+.titlebar-button:hover {
+  background: var(--titlebar-hover);
+  color: var(--text);
+}
+
+.titlebar-button.close:hover {
+  background: var(--close-hover);
+  color: #ffffff;
+}
+
+.titlebar-button.close:active {
+  background: var(--close-pressed);
+}
+
+.titlebar-button svg {
+  width: 10px;
+  height: 10px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.2;
+}
+
+main {
+  flex: 1;
+  overflow-y: auto;
+  /* a thin scrollbar with no track, so a long screen doesn't get a grey band
+     down the window's right edge */
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+  padding: 28px max(24px, calc((100% - 640px) / 2)) 40px;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+}
+
+main > * {
+  flex-shrink: 0;
+}
+
+/* a short screen sits a third of the way down the room it has to spare */
+main.focus::before,
+main.focus::after {
+  content: "";
+  flex: 1;
+}
+
+main.focus::after {
+  flex-grow: 2;
+}
+
+h1 {
+  font-size: 1.6rem;
+  line-height: 1.25;
+  margin: 0 0 12px;
+}
+
+h2 {
+  font-size: 1.05rem;
+  margin: 28px 0 10px;
+}
+
+p {
+  margin: 0 0 12px;
+}
+
+.muted,
+.hint,
+.footnote,
+.row-meta {
+  color: var(--muted);
+}
+
+.center {
+  text-align: center;
+}
+
+.step {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.head h1 {
+  margin: 0;
+}
+
+.head-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* a button that shows only a picture */
+button.icon-only {
+  padding: 9px 11px;
+}
+
+button.icon-only .icon {
+  width: 18px;
+  height: 18px;
+}
+
+h1.with-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0 8px;
+}
+
+button {
+  font: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border-radius: 5px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+}
+
+button:hover:not(:disabled):not(.titlebar-button) {
+  border-color: var(--muted);
+}
+
+button.primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--primary-text);
+  font-weight: 600;
+}
+
+button.danger {
+  background: var(--danger);
+  border-color: var(--danger);
+  color: var(--surface);
+  font-weight: 600;
+}
+
+button.accent {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--surface);
+  font-weight: 600;
+}
+
+button.quiet {
+  background: transparent;
+}
+
+/* Reveal is brass and Delete is red wherever they appear: tinted where they
+   open a confirmation, solid on the confirmation itself */
+button.reveal {
+  background: var(--warn-bg);
+  border-color: var(--warn-line);
+  color: var(--accent);
+}
+
+button.reveal:hover:not(:disabled) {
+  border-color: var(--accent);
+}
+
+button.delete {
+  background: var(--danger-soft);
+  border-color: var(--danger-line);
+  color: var(--danger);
+}
+
+button.delete:hover:not(:disabled) {
+  border-color: var(--danger);
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+button:focus-visible,
+input:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+kbd {
+  font: inherit;
+  font-size: 0.75rem;
+  padding: 0 6px;
+  border-radius: 4px;
+  border: 1px solid currentColor;
+  opacity: 0.7;
+}
+
+.notice {
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+}
+
+.card {
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  margin: 16px 0;
+}
+
+.warning {
+  background: var(--warn-bg);
+  border: 1px solid var(--warn-line);
+}
+
+.warning h2 {
+  margin-top: 0;
+}
+
+.callout {
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+}
+
+.callout.danger {
+  background: var(--danger-soft);
+  border-color: transparent;
+}
+
+.error {
+  color: var(--danger);
+}
+
+.error:empty {
+  display: none;
+}
+
+.codes,
+.paths {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.paths li {
+  font-family: Consolas, "Cascadia Mono", monospace;
+  font-size: 0.85rem;
+  overflow-wrap: anywhere;
+  margin-bottom: 6px;
+  user-select: text;
+}
+
+.row {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  margin-bottom: 10px;
+}
+
+.warning .row {
+  background: transparent;
+  border-color: var(--warn-line);
+}
+
+.row-main {
+  min-width: 0;
+}
+
+.row-title {
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.row-meta {
+  font-size: 0.9rem;
+}
+
+/* a deleted code that had been revealed, shown as it is */
+.row-code {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  user-select: text;
+}
+
+.row-path {
+  font-family: Consolas, "Cascadia Mono", monospace;
+  font-size: 0.8rem;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+  user-select: text;
+}
+
+.row-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.empty {
+  color: var(--muted);
+  padding: 18px 0;
+}
+
+.footnote {
+  font-size: 0.85rem;
+  overflow-wrap: anywhere;
+  margin-top: 18px;
+}
+
+.path-to {
+  font-weight: 600;
+  margin: 0 0 14px;
+  padding-left: 1.4em;
+}
+
+.path-to li {
+  margin-bottom: 4px;
+}
+
+.path-to .muted {
+  font-weight: 400;
+}
+
+form,
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin: 14px 0 6px;
+}
+
+label.check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+input:not([type="checkbox"]):not([type="radio"]) {
+  font: inherit;
+  width: 100%;
+  max-width: 320px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+  user-select: text;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: var(--accent);
+}
+
+/* a short list to pick one from, such as the appearance in Settings */
+legend {
+  padding: 0;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+label.choice {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 9px 14px;
+  font-weight: 400;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--surface);
+  cursor: pointer;
+}
+
+/* Settings: one group under another, and a switch for what is on or off */
+fieldset + fieldset {
+  margin-top: 26px;
+}
+
+label.setting {
+  margin: 0;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+input.switch {
+  appearance: none;
+  flex-shrink: 0;
+  position: relative;
+  width: 36px;
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--muted);
+  background: var(--surface);
+  cursor: pointer;
+  transition:
+    background 0.12s,
+    border-color 0.12s;
+}
+
+input.switch::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--muted);
+  transition:
+    transform 0.12s,
+    background 0.12s;
+}
+
+input.switch:checked {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+input.switch:checked::before {
+  background: var(--surface);
+  transform: translateX(16px);
+}
+
+/* Settings: the app's own links, and the address feedback goes to */
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hint.address {
+  margin-top: 8px;
+  user-select: text;
+}
+
+details {
+  margin-top: 18px;
+}
+
+/* the number fields side by side, so the form's buttons stay in view */
+.fields {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 16px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.hint {
+  font-size: 0.9rem;
+  margin: 4px 0 0;
+}
+
+.memory-number {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-align: center;
+  margin: 18px 0;
+}
+
+.instruction-box {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 36px 16px 22px;
+  margin: 22px 0 8px;
+  text-align: center;
+}
+
+.instruction {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 0.35em;
+  font-size: 5.5rem;
+  font-weight: 700;
+  line-height: 1;
+  min-height: 1.1em;
+}
+
+.tap-word {
+  font-size: 0.45em;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}
+
+.key-hint {
+  height: 26px;
+  margin-top: 12px;
+}
+
+.actions.centred {
+  justify-content: center;
+}
+
+/* the memory check: one box per digit */
+.cells {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 22px 0 6px;
+}
+
+/* named through .cells so it outranks the rule for ordinary text fields */
+.cells input.cell {
+  width: 54px;
+  min-width: 0;
+  max-width: none;
+  height: 66px;
+  padding: 0;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  caret-color: transparent;
+}
+
+/* the outline already shows which box is next */
+.cells input.cell::selection {
+  background: transparent;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 4px 16px;
+  align-items: baseline;
+  margin: 0 0 16px;
+}
+
+.facts dt {
+  color: var(--muted);
+}
+
+.facts dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.bar {
+  height: 10px;
+  border-radius: 3px;
+  background: var(--line);
+  overflow: hidden;
+  margin: 18px 0 10px;
+}
+
+.bar-fill {
+  height: 100%;
+  width: 0;
+  background: var(--accent);
+  transition: width 0.15s linear;
+}
+
+.revealed-code {
+  font-size: 3.6rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-align: center;
+  margin: 18px 0;
+  overflow-wrap: anywhere;
+  user-select: text;
+}
+
+/* past 12 digits, small enough to stay on one line in the narrowest window */
+.revealed-code.long {
+  font-size: 2.7rem;
+}
+
+/* text someone locked themselves: every character distinct, every space
+   kept, and its longest still on one line in the narrowest window */
+.revealed-code.text,
+.row-code.text,
+.own-text input.typed {
+  font-family: Consolas, "Cascadia Mono", Menlo, monospace;
+  letter-spacing: 0;
+}
+
+.revealed-code.text,
+.row-code.text {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.revealed-code.text {
+  font-size: 1.5rem;
+}
+
+.row-code.text {
+  font-size: 1.05rem;
+}
+
+.own-text input.typed {
+  max-width: 380px;
+}
+
+/* ------------------------------------------------------------- pictures */
+
+.diagram {
+  display: block;
+  overflow: visible;
+}
+
+.diagram text {
+  font-family: inherit;
+  fill: var(--text);
+  text-anchor: middle;
+  dominant-baseline: central;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 36px;
+  align-items: center;
+}
+
+/* a small picture inside a button, in the button's own colour */
+.icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.glyph {
+  fill: none;
+  stroke: var(--text);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.backspace {
+  width: 39px;
+  height: 26px;
+  margin: 0 auto;
+}
+
+.backspace .glyph {
+  stroke: var(--muted);
+}
+
+h1 .backspace {
+  width: 1.5em;
+  height: 1em;
+  margin: 0;
+}
+
+.key rect {
+  fill: var(--soft);
+  stroke: var(--line);
+}
+
+.key text {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.key.pressed rect {
+  fill: var(--accent);
+  stroke: var(--accent);
+}
+
+.key.pressed text {
+  fill: var(--bg);
+}
+
+.phone {
+  width: 170px;
+  height: 340px;
+}
+
+.phone-body {
+  fill: var(--surface);
+  stroke: var(--muted);
+  stroke-width: 2.5;
+}
+
+.phone-island {
+  fill: var(--muted);
+}
+
+.phone-line {
+  fill: var(--line);
+}
+
+.dot {
+  fill: none;
+  stroke: var(--text);
+  stroke-width: 1.6;
+}
+
+/* the sticky note comes down over the dots, rests, and starts again */
+.note {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: rotate(-5deg);
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
+  animation: cover 4.8s ease-in-out infinite;
+}
+
+.note-paper {
+  fill: var(--note);
+}
+
+.note-strip {
+  fill: var(--note-edge);
+  opacity: 0.45;
+}
+
+@keyframes cover {
+  0% {
+    opacity: 0;
+    transform: translate(58px, -70px) rotate(14deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  30%,
+  90% {
+    opacity: 1;
+    transform: rotate(-5deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(-5deg);
+  }
+}
+
+.loop {
+  width: 100%;
+  height: auto;
+  margin: 20px 0 10px;
+}
+
+.tile {
+  fill: var(--surface);
+  stroke: var(--line);
+  stroke-width: 1.5;
+}
+
+.arrow {
+  fill: none;
+  stroke: var(--muted);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.loop .key text {
+  font-size: 11px;
+}
+
+.loop .glyph {
+  stroke-width: 1.2;
+}
+
+.loop-word {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.diagram .loop-word,
+.diagram .caption {
+  fill: var(--muted);
+}
+
+.loop-key {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.caption {
+  font-size: 14px;
+}
+
+.keycap {
+  fill: var(--soft);
+  stroke: var(--muted);
+  stroke-width: 1.5;
+}
+
+.keycap-text {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ripple {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+  opacity: 0;
+}
+
+.shown,
+.ripple,
+.spacebar {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+/* One tap, told in three turns of 1.5s each. Every animation runs on the
+   same 4.5s clock, and the second and third turns start late. */
+.turn .tile {
+  animation: lit 4.5s infinite;
+}
+
+.turn .caption {
+  animation: lit-text 4.5s infinite;
+}
+
+.shown {
+  animation: shown 4.5s infinite;
+}
+
+.ripple {
+  animation: ripple 4.5s infinite;
+}
+
+.spacebar {
+  animation: press 4.5s infinite;
+}
+
+.turn-2 .tile,
+.turn-2 .caption,
+.ripple {
+  animation-delay: 1.5s;
+}
+
+.turn-3 .tile,
+.turn-3 .caption,
+.spacebar {
+  animation-delay: 3s;
+}
+
+@keyframes lit {
+  0%,
+  30% {
+    stroke: var(--accent);
+    stroke-width: 2.5;
+  }
+  36%,
+  96% {
+    stroke: var(--line);
+    stroke-width: 1.5;
+  }
+  100% {
+    stroke: var(--accent);
+    stroke-width: 2.5;
+  }
+}
+
+@keyframes lit-text {
+  0%,
+  30% {
+    fill: var(--text);
+  }
+  36%,
+  96% {
+    fill: var(--muted);
+  }
+  100% {
+    fill: var(--text);
+  }
+}
+
+@keyframes shown {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  5%,
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes ripple {
+  0% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  6% {
+    opacity: 0.9;
+  }
+  24%,
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes press {
+  0%,
+  16%,
+  100% {
+    transform: none;
+  }
+  7% {
+    transform: translateY(3px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .note,
+  .turn .tile,
+  .turn .caption,
+  .shown,
+  .ripple,
+  .spacebar {
+    animation: none;
+  }
+}

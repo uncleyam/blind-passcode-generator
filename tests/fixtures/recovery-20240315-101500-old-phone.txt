@@ -1,0 +1,4 @@
+LOCKER RECOVERY FILE
+Label: old phone
+
+eyJ2ZXJzaW9uIjogMSwgInBpbiI6ICI0ODIxIiwgImxhYmVsIjogIm9sZCBwaG9uZSIsICJjcmVhdGVkIjogIjIwMjQwMzE1LTEwMTUwMCJ9
