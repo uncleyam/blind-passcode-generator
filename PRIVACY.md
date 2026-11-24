@@ -3,8 +3,10 @@
 Blind Passcode Generator collects nothing about you.
 
 - There is no account, no analytics and no advertising.
-- The app itself makes no connections to the internet, and nothing is sent to
-  its author or to anyone else.
+- The app's own code makes no connections to the internet, and nothing is
+  sent to its author or to anyone else. It works with the internet off.
+- On Windows, the Microsoft part that draws the app's window does contact
+  Microsoft: see [WebView2 on Windows](#webview2-on-windows).
 - Everything the app saves stays in files on your own computer.
 - **Donate**, in Settings, opens a page on ko-fi.com in your web browser. The
   app sends nothing there itself, and nothing in the app changes if you give.
@@ -28,10 +30,16 @@ Blind Passcode Generator collects nothing about you.
 Uninstalling the app leaves these files where they are. Delete the `.locker`
 folder yourself to remove them.
 
-## The Windows installer
+## WebView2 on Windows
 
 The app shows its screens with WebView2, a part of Windows made by Microsoft.
-If a PC doesn't have it, the installer downloads it from Microsoft.
+WebView2 sends its own diagnostic data and crash reports to Microsoft, as it
+does in every app that uses it. The app doesn't need this: it works with the
+internet off. You can limit what is sent in Windows Settings, under Privacy &
+security, Diagnostics & feedback. Microsoft describes it in
+[Data and privacy in WebView2](https://learn.microsoft.com/microsoft-edge/webview2/concepts/data-privacy).
+
+If a PC doesn't have WebView2, the installer downloads it from Microsoft.
 
 ## Questions
 

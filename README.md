@@ -79,8 +79,9 @@ end of a setup the app offers to put a copy in a synced folder such as
 OneDrive, iCloud Drive or Dropbox; set `LOCKER_BACKUP_DIR` to choose the
 folder yourself. Uninstalling the app leaves these files alone.
 
-The app collects nothing and makes no connections to the internet: see
-[PRIVACY.md](PRIVACY.md).
+The app collects nothing and works with the internet off. Its own code makes
+no connections. On Windows, the Microsoft part that draws the window sends
+Microsoft its own diagnostic data: see [PRIVACY.md](PRIVACY.md).
 
 ## Extra: locking away your own text
 

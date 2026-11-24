@@ -55,7 +55,7 @@ GOOD TO KNOW
 • Built for the iPhone Screen Time passcode. Works for any keypad code of 3 to 16 digits.
 • You need this computer and the iPhone side by side. Nothing is installed on the phone.
 • At the end of a setup you enter your Apple ID on the phone. It is your way back in if the saved code is ever lost.
-• No account, no ads, no tracking. The app makes no connections to the internet.
+• No account, no ads, no tracking. Works offline.
 • Deleted codes wait 30 days in Recently deleted.
 • Free and open source.
 
@@ -79,7 +79,7 @@ A time-lock sets how long getting the code back takes
 Offers a backup to a synced folder such as OneDrive
 Keeps deleted codes for 30 days
 Light and dark appearance
-No account, no ads, no internet connection
+No account, no ads, works offline
 ```
 
 ### Screenshots
@@ -117,7 +117,7 @@ Blind Passcode Generator is a packaged Win32 desktop application: a Rust program
 ### Notes for certification
 
 ```
-The app needs no account or sign-in and makes no network connections.
+The app needs no account, sign-in or internet connection. Its own code makes no network connections; WebView2 may contact Microsoft by itself.
 
 It helps a person set an iPhone Screen Time passcode that they don't know. It can be tested without an iPhone:
 
